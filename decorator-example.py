@@ -14,7 +14,7 @@ def f1(func):
         print("Ended")
     return wrapper
 
-# Avvoids declaring this --> f = f1(f)
+# Avoids declaring this --> f = f1(f)
 @f1         
 def f():
     print("Hello")

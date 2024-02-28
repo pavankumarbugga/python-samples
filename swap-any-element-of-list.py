@@ -9,6 +9,7 @@ pos1,pos2=1,3
 # Approach-2 : Using pop built-in function
 first=mylist.pop(pos1)
 second=mylist.pop(pos2-1)
+print(first,second)
 mylist.insert(pos1,second)
 mylist.insert(pos2,first)
 print("Swapped list:",mylist)

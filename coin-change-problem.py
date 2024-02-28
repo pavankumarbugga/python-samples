@@ -42,7 +42,7 @@
 
 
 amount=8         #int(input())
-coins=[1,2,3]
+coins=[1,2,3,5]
 
 def findCombinations(amt, coins):
     combinations=[0]*(amt+1)

@@ -10,15 +10,10 @@ def process_api(page):
         mysum = 0
     
         for i in datalist:
-            #print(i["close"])
             mysum += i["close"]
 
         return mysum
-        #print(mysum)
-        #mean = mysum/len(datalist)
-        #print(mean)
-    
-#print(process_api(2))
+
 
 url= f"https://jsonmock.hackerrank.com/api/stocks?page=1"
 res = requests.get(url)

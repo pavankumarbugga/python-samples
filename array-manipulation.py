@@ -19,5 +19,5 @@ def arrayManipulation(n, queries):
     
 
 n = 10
-queries = [[1,5,3],[4,8,7],[6,9,1]]
+queries = [[1,5,3],[4,8,7],[6,9,1]]     #2d array - table
 arrayManipulation(n,queries)

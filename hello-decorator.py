@@ -1,13 +1,12 @@
-def greet(name):
+def say_twice(name):
     print("Hello ", name)
 
 def smart(func):
     def inner(name):
-        for i in range(1,3):
-            #print("Hello ", name)
-            func(name)
-        #return func(name)
+        for i in range(1,2):
+            print("Hello ", name)
+        return func(name)
     return inner
 
-greet = smart(greet)
-greet("Pavan Kumar")
+say_twice = smart(say_twice)
+say_twice("Pavan Kumar")
