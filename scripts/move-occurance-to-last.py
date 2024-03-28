@@ -1,17 +1,24 @@
-def move_to_last(mylist, element):
-    print(mylist)
-    size=len(mylist)
-    index=mylist.index(element)
-    #print(index)
-    mylist.append(mylist.pop(index))
-    print(mylist)
-    while size > 2 and element in mylist:
-        move_to_last(mylist[0:len(mylist)-1], element)
+def move_element_to_end(arr,ele):
+    # Initialize a pointer to keep track of the position to swap with 0's
+    pointer = 0
 
+    # Iterate through the array
+    for i in range(len(arr)):
+        if arr[i] != ele:
+            # If the current element is not 0, swap it with the element at the pointer
+            # print(i,pointer)
+            arr[i], arr[pointer] = arr[pointer], arr[i]
+            # print(arr)
+            pointer += 1
 
-arr = [4,1,5,2,452,4,5,256,79]
-#print(f'Initial array: {arr}')
+    # Fill the remaining positions with 0's
+    # for i in range(pointer, len(arr)):
+    #     arr[i] = 0
 
-print(arr.index(3))
-#move_to_last(arr,4)
-#print(f'Final array: {arr}')
+    # return arr
+
+# Example usage:
+arr = [1, 0, 1, 0, 1, 0, 0, 1]
+element = 1
+result = move_element_to_end(arr,element)
+print(f"Array after moving {element}'s to the end: {arr}")
